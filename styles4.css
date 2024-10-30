@@ -1,0 +1,274 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ebebeb;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 20px;
+    color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    margin-right: auto;
+}
+
+header .logo img {
+    height: 120px;
+    width: 130px;
+    vertical-align: middle;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s ease;
+    font-size: 1.3em;
+}
+
+nav ul li a:hover {
+    background-color: #4665f1;
+    border-radius: 5px;
+}
+
+/* Secciones */
+.section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Títulos y párrafos */
+h1,
+h2 {
+    color: #1000a0;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+    text-align: center;
+}
+p {
+    font-size: 1.1em;
+    color: #000000;
+    font-family: cursive;
+}
+.productos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.productos h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #ff4e4e;
+    position: relative;
+}
+
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.4);
+}
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services h1 {
+    color: #c8102e;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #fff;
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.service img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.service h2 {
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.service p {
+    color: #4a4a4a;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #004d40;
+}
+
+form button {
+    background-color: #f83939;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2d1eff;
+}
+
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+}
+
+
+footer {
+    background-color: #9c9c9c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 992px) {
+
+    .producto-item,
+    .servicio-item {
+        max-width: 45%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .producto-item,
+    .servicio-item {
+        max-width: 90%;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .producto-item,
+    .servicio-item {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+}

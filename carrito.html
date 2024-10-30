@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Muebles</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tienda de Muebles</h1>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenidos a nuestra tienda de muebles</h2>
+        <p>Encuentra muebles modernos y elegantes para tu hogar.</p>
+    </section>
+
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="producto">
+            <img src="imagenes/sofa moderno.jpg" alt="Sofá moderno">
+            <h3>Sofá moderno</h3>
+            <p>Precio: $500</p>
+            <button onclick="agregarAlCarrito('Sofá moderno', 500)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/mesa de comedor.jpg" alt="Mesa de comedor">
+            <h3>Mesa de comedor</h3>
+            <p>Precio: $300</p>
+            <button onclick="agregarAlCarrito('Mesa de comedor', 300)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/silla de oficina.jpg" alt="Silla de oficina">
+            <h3>Silla de oficina</h3>
+            <p>Precio: $150</p>
+            <button onclick="agregarAlCarrito('Silla de oficina', 150)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/librero.jpg" alt="Librero">
+            <h3>Librero</h3>
+            <p>Precio: $200</p>
+            <button onclick="agregarAlCarrito('Librero', 200)">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <section id="carrito" class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p id="total">Total: $0</p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </section>
+
+    <script src="carrito.js"></script>
+</body>
+
+</html>
